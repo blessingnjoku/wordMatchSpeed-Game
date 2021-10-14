@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="JavaScript/JQuery_uncompressed.js"></script>
+    <link rel="stylesheet" href="CSS/Word-Match.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game: Word Match </title>
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <script src="JavaScript/bootstrap.min.js"></script>
+</head>
+
+<body class=" bg-secondary" >
+
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand badge-primary badge-pill font-weight-bolder" style="font-family: monospace, cursive;" href="#">W-M</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" data-toggle="modal" data-target="#gameDescription" href="#">Game Desciption</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" data-toggle="modal" data-target="#instruction" href="#">Instruction</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" data-toggle="modal" data-target="#review" href="#">Review</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Contact Developers
+                    </a>
+                    <div class="dropdown-menu bg-secondary text-light" aria-labelledby="navbarDropdownMenuLink">
+                            <label for="" class=" ml-2">  Areago Tomiwa</label>
+                            <a class="dropdown-item" href="#" >     Call:- 08080653108</a>
+                            <a class="dropdown-item" href="#">      Email:- areago.tomiwa@gmail.com</a><br>
+                            <label for="" class=" ml-2">  Blessing Njoku</label>
+                            <a class="dropdown-item" href="#" >     Call:- 08137434083</a>
+                            <a class="dropdown-item" href="#">      Email:- blessingnjoku505@gmail.com</a>
+  
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <!--First Modal -->
+    <div class="modal fade" id="gameDescription" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdrop-GameDescription" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header bg-dark text-light">
+                    <h5 class="modal-title" id="staticBackdrop-GameDescription">Game Desciption</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body bg-dark text-light">
+
+                    <h2>Word Match</h2>
+                    <span>
+                        This is a word game that enables users to learn how to type fast and it requires 
+                        the player to type-in the right case-sensitive words into the input section, in order to match
+                        the displayed word.
+                        <!-- 
+                        definition
+                        benefits
+                        Downside - addictive -->
+
+                    </span> <br> <br>
+                    <img src="Images/W-M.png" alt="desciption">
+                    <img src="Images/gameOver.png" alt="gameOver">
+                    <h3>Game Components</h3>
+                    <ul style="list-style-type: disc;">
+                        <li>
+                            <h5>Game:-</h5><span>This is container accomodating all other components that makes up the game</span> 
+                        </li>
+                        <li>
+                            <h5>Score:-</h5><span>This displays the score of the game in progress</span> 
+                        </li>
+                        <li>
+                            <h5>Word-match Indicator:-</h5><span>This displays an image indicating if the right word meant for the input section align with the word displayed on the screen</span> 
+                        </li>
+                        <li>
+                            <h5>Count-down Timer:-</h5><span>This displays the time remaining for the game to end which is 60 seconds, which commences by clicking the start button</span> 
+                        </li>
+                        <li>
+                            <h5>Word-display Screen:-</h5><span>This section displays random words, that changes when the right word from the value of the input section, match with it.</span> 
+                        </li>
+                        <li>
+                            <h5>Word-Input Section:-</h5><span>This receives text values that match the words displayed on the screen</span> 
+                        </li>
+                        <li>
+                            <h5>Instruction:-</h5><span>This gives a short information on what to be donr to the player.</span> 
+                        </li>
+                        <li>
+                            <h5>Button:-</h5><span>This is a button that starts up the game play, when clicked on and reloads the page on reset</span> 
+                        </li>
+                        <li>
+                            <h5>Keyboard:-</h5><span>This is an image of the recommended keyboard layout.</span> 
+                        </li>
+                        <li>
+                            <h5>Game Over:-</h5><span>This displays a section when the time elapse, indicating that the game is over and also shows the total score earned</span> 
+                        </li>
+                    </ul>
+                </div>
+                <div class="modal-footer bg-dark text-light">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Dismiss</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Second Modal -->
+    <div class="modal fade" id="instruction" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropInstruction" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-dark text-light">
+            <h5 class="modal-title" id="staticBackdropInstruction">Instructions</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body bg-dark text-light">
+            <ul>
+                <li>Click on the start button to start playing the game.</li>
+                <li>Start typing the words displayed at the display screen into the input section that has a placeholder of 'Start typing...' inside it.</li>
+                <li>To reset the whole game, click on the reset button.</li>
+                <li>Ensure you try to beat your previous score to become a faster typist. </li>
+            </ul>
+            </div>
+            <div class="modal-footer bg-dark text-light">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Understood</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+
+
+
+    <!--Third Modal -->
+    <div class="modal fade" id="review" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdrop-Review" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header bg-dark text-light">
+              <h5 class="modal-title" id="staticBackdrop-Review">Review</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body bg-dark text-light">
+              <form>
+                <div class="form-group">
+
+                    <label for="email" style="font-weight: bold;">To:</label><br>
+                    <label for="email" style="font-weight: lighter;">blessingnjoku505@gmail.com</label><br>
+                    <label for="email" style="font-weight:lighter;">areago.tomiwa@gmail.com</label><br><br>
+
+
+                    <label for="email">Enter your Full Name:</label>
+                    <input type="text" class="form-control" aria-describedby="emailHelp"><br>
+                    
+
+                    <label for="email">Enter your email:</label>
+                    <input type="email" class="form-control" aria-describedby="emailHelp">
+                    <small id="emailHelp" class="form-text text-muted">Your mail has been encrypted with the server!</small>
+                </div>
+  
+                <div class="form-group">
+                  <label for="message">Enter your message:</label>
+                  <textarea class="form-control bg-light" name="" id="text" cols="30" rows="10" style="border-radius: 20px;"></textarea>
+                </div>
+  
+                <div class="form-group form-check">
+                  <input type="checkbox" class="form-check-input" id="notifier">
+                  <label class="form-check-label" for="exampleCheck1">Send me Feedback</label>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer bg-dark text-light">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Dismiss</button>
+              <button type="button" class="btn btn-primary" data-dismiss="modal">Send</button>
+            </div>
+          </div>
+        </div>
+    </div>
+
+
+
+
+    <header class=" bg-dark text-light text-center">
+        <h2 style="font-family: monospace, cursive;">Word Match</h2>
+    </header>
+
+    <div id="container">
+        <div id="menu_container">
+            <div class="indicator">
+                <div id="title">
+
+                </div>
+                <div id="score">
+
+                    <h3>
+                        Score: <span id="scoreValue">0</span>
+                    </h3>
+                </div>
+            </div>
+            <div id="countDownContainer">
+                <div id="countDown">
+                    <span id="countDownTime"></span>
+                </div>
+            </div>
+            <div class="indicator">
+
+                <div id="title">
+                </div>
+                <div id="different">
+                    <img src="Images/cancel - Copy.png" style="height: 100px; width: 100px;" alt="">
+                </div>
+                <div id="match">
+                    <img src="Images/Tick-icon1 - Copy.png" style="height: 100px; width: 100px;" alt="">
+                </div>
+            </div>
+            
+        </div>
+        <hr class=" my-1">
+        <div id="game">
+            <div id="gameOver">
+                
+            </div>
+            <div id="lining">
+                
+                <div id="screen" class="bg-primary">
+                    <div id="main">
+                        <p id="wordDisplayed"></p>
+                    </div>
+                </div>
+                <div id="input">
+                        <input id="wordInput" style="font-family: cursive; width: 580px;" class="form-control ml-sm-4 mr-sm-2 ml-md-4 mr-md-2 ml-lg-4 mr-lg-2" type="text" autocomplete="off" placeholder="Start typing...">
+                </div>
+                <div id="info" class=" bg-primary">
+                    
+                    Type the correct letters that match the words on screen
+                </div>
+                <button id="startreset" class="btn btn-primary text-white mt-2 mb-1 pl-3 pr-3 pt-1 pb-1" style="border-radius: 30px; border: none;">Start</button>
+                <div id="keyboard" class=" bg-primary">
+                    <img class="ml-2 mt-1" src="Images/Black-keyboard.png" style =" width: 610px; height: 230px; border-radius: 10px;" alt="keyboard">
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+
+    <footer class="container-fluid bg-dark text-center text-light mt-3">
+        <div id="footContent">
+            <h1 id="wordMatch" class="badge-primary badge-pill" style=" width: max-content;" href="#">W-M</h1>
+            <h4 id="groupProject" class=" font-weight-bold"> Group Project: Tomiwa & Blessing</h4>
+        </div>
+        <p id="copyright" class=" font-italic" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"> Copyright ©2020. Group-Project Inc. All rights reserved. Privacy & Legal Policies.</p>
+    </footer>
+
+
+    <script src="JavaScript/Word-Match.js"></script>
+</body>
+</html>
